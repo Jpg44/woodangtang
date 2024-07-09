@@ -1,0 +1,41 @@
+spring:
+  datasource:
+    url: jdbc:mysql://k10b208.p.ssafy.io:3306/ssafy
+    username: root
+#    url: jdbc:mysql://192.168.0.184:3306/ssafy
+#    username: ssafy
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8082
+#  security:
+#          # 인증을 위한 사용자 정보 설정
+#          user:
+#            # 인메모리 사용자 추가
+#            name: user
+#            password: password
+#            roles: USER
+#
+#          # 보안 설정
+#          # URL 패턴에 따른 권한 설정
+#          # 모든 요청은 인증이 필요하며, /public/** 경로는 인증 없이 접근 가능
+#          authorize-requests:
+#            antMatchers:
+#              /public/**: permitAll
+#            anyRequest: authenticated
+#
+#          # 로그인 페이지 설정
+#          login:
+#            page: /login
+#            permitAll: true
+#
+#          # 로그아웃 설정
+#          logout:
+#            url: /logout
+#            logoutSuccessUrl: /login?logout
+#            permitAll: true
